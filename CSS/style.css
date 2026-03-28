@@ -1,0 +1,60 @@
+body {
+  background-color: #f0f2f5;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  background-color: #003366; /* Azul institucional */
+  border-bottom: 3px solid #ce1126; /* Detalle en rojo */
+}
+
+.main-container {
+  max-width: 800px;
+  margin-top: 50px;
+}
+
+.card-form {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.comment-box {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-left: 5px solid #003366;
+  transition: transform 0.2s;
+}
+
+.comment-box:hover {
+  transform: scale(1.01);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.user-name {
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.user-name i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.btn-send {
+  background-color: #003366;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+.btn-send:hover {
+  background-color: #002244;
+  color: white;
+}
