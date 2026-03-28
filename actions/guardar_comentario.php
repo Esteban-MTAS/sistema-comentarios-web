@@ -1,11 +1,12 @@
 <?php
+header("Content-Type: application/json");
+
 $archivo = "../data/comentarios.json";
 
-// Leer JSON enviado desde JS
 $data = json_decode(file_get_contents("php://input"), true);
 
 if (!$data) {
-    echo json_encode(["success" => false, "message" => "Datos inválidos"]);
+    echo json_encode(["success" => false]);
     exit;
 }
 
@@ -19,7 +20,6 @@ if (file_exists($archivo)) {
     $comentarios = json_decode($contenido, true);
 }
 
-// Agregar fecha
 $nuevo = [
     "nombre" => $nombre,
     "comentario" => $comentario,
@@ -30,5 +30,4 @@ $comentarios[] = $nuevo;
 
 file_put_contents($archivo, json_encode($comentarios, JSON_PRETTY_PRINT));
 
-// Respuesta para JS
 echo json_encode(["success" => true]);
