@@ -1,10 +1,3 @@
-/**
- * app.js - Frontend JS
- * Sistema de Comentarios ITLA
- * Responsable: Frontend (Esteban Josue Mata Acosta)
- * Backend: JSON (guardar_comentario.php / consultas.php)
- */
-
 document.addEventListener("DOMContentLoaded", () => {
   cargarComentarios();
 
@@ -12,17 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
   if (form) form.addEventListener("submit", manejarEnvio);
 });
 
-// ─────────────────────────────────────────
-// ENVÍO — manda JSON al backend
-// ─────────────────────────────────────────
-
 async function manejarEnvio(e) {
   e.preventDefault();
 
-  const nombre     = document.getElementById("nombre");
+  const form = e.target;
+  const nombre = document.getElementById("nombre");
   const comentario = document.getElementById("comentario");
-  const btnEnviar  = document.getElementById("btn-enviar");
-  const alerta     = document.getElementById("alerta-form");
+  const btnEnviar = document.getElementById("btn-enviar");
+  const alerta = document.getElementById("alerta-form");
 
   limpiarErrores();
 
@@ -53,12 +43,11 @@ async function manejarEnvio(e) {
   btnEnviar.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span> Enviando...';
 
   try {
-    // ► Envía JSON al backend
     const respuesta = await fetch("actions/guardar_comentario.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        nombre:     nombre.value.trim(),
+        nombre: nombre.value.trim(),
         comentario: comentario.value.trim()
       })
     });
@@ -73,7 +62,6 @@ async function manejarEnvio(e) {
     } else {
       mostrarAlerta(alerta, resultado.message || "No se pudo guardar el comentario.", "danger");
     }
-
   } catch (error) {
     mostrarAlerta(alerta, "❌ Error de conexión con el servidor.", "danger");
     console.error("Error al enviar:", error);
@@ -82,10 +70,6 @@ async function manejarEnvio(e) {
     btnEnviar.innerHTML = 'Enviar Comentario <i class="bi bi-send-fill ms-2"></i>';
   }
 }
-
-// ─────────────────────────────────────────
-// CARGA — lee JSON del backend
-// ─────────────────────────────────────────
 
 async function cargarComentarios() {
   const contenedor = document.getElementById("contenedor-comentarios");
@@ -97,7 +81,7 @@ async function cargarComentarios() {
     </div>`;
 
   try {
-    const respuesta   = await fetch("actions/consultas.php");
+    const respuesta = await fetch("actions/consultas.php");
     const comentarios = await respuesta.json();
 
     if (!Array.isArray(comentarios) || comentarios.length === 0) {
@@ -112,15 +96,14 @@ async function cargarComentarios() {
     contenedor.innerHTML = [...comentarios].reverse().map(crearTarjetaComentario).join("");
 
     contenedor.querySelectorAll(".comment-box").forEach((el, i) => {
-      el.style.opacity   = "0";
+      el.style.opacity = "0";
       el.style.transform = "translateY(12px)";
       setTimeout(() => {
         el.style.transition = "opacity 0.3s ease, transform 0.3s ease";
-        el.style.opacity    = "1";
-        el.style.transform  = "translateY(0)";
+        el.style.opacity = "1";
+        el.style.transform = "translateY(0)";
       }, i * 80);
     });
-
   } catch (error) {
     contenedor.innerHTML = `
       <div class="alert alert-warning">
@@ -131,15 +114,14 @@ async function cargarComentarios() {
   }
 }
 
-// ─────────────────────────────────────────
-// HELPERS
-// ─────────────────────────────────────────
-
 function crearTarjetaComentario({ nombre, comentario, fecha }) {
   const fechaStr = fecha
     ? new Date(fecha).toLocaleString("es-DO", {
-        day: "2-digit", month: "short", year: "numeric",
-        hour: "2-digit", minute: "2-digit"
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit"
       })
     : "";
 
@@ -158,7 +140,7 @@ function crearTarjetaComentario({ nombre, comentario, fecha }) {
 function mostrarError(input, msg) {
   input.classList.add("is-invalid");
   const d = document.createElement("div");
-  d.className   = "invalid-feedback";
+  d.className = "invalid-feedback";
   d.textContent = msg;
   input.parentElement.appendChild(d);
 }
@@ -169,7 +151,7 @@ function limpiarErrores() {
 }
 
 function mostrarAlerta(el, msg, tipo) {
-  el.className   = `alert alert-${tipo} mt-3`;
+  el.className = `alert alert-${tipo} mt-3`;
   el.textContent = msg;
   el.classList.remove("d-none");
   setTimeout(() => el.classList.add("d-none"), 5000);

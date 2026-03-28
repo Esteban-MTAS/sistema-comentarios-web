@@ -1,82 +1,43 @@
 [
     {
-        "nombre": "Elian",
-        "comentario": "Un comentario",
-        "fecha": "2026-03-28 22:33:40"
+        "nombre": "Daniela G\u00f3mez S\u00e1nchez",
+        "comentario": "Me parece una buena pr\u00e1ctica. La p\u00e1gina tiene una apariencia moderna y entendible.",
+        "fecha": "2026-03-28 22:51:30"
     },
     {
-        "nombre": "Elian",
-        "comentario": "prueba",
-        "fecha": "2026-03-28 23:29:15"
+        "nombre": "Richard Manuel D\u00edaz",
+        "comentario": "Ultima prueba de comentario",
+        "fecha": "2026-03-28 22:58:24"
     },
     {
-        "nombre": "Elian",
-        "comentario": "prueba",
-        "fecha": "2026-03-28 23:29:17"
+        "nombre": "Richard Manuel D\u00edaz",
+        "comentario": "Excelente trabajo del equipo. Todo carg\u00f3 correctamente desde el inicio.",
+        "fecha": "2026-03-28 23:03:51"
     },
     {
-        "nombre": "Elian",
-        "comentario": "prueba",
-        "fecha": "2026-03-28 23:29:17"
+        "nombre": "Jos\u00e9 Miguel Rodr\u00edguez",
+        "comentario": "Me gust\u00f3 mucho la interfaz del sistema. Se ve organizada y el formulario funciona r\u00e1pido.",
+        "fecha": "2026-03-28 23:06:53"
     },
     {
-        "nombre": "Elian",
-        "comentario": "prueba",
-        "fecha": "2026-03-28 23:29:17"
+        "nombre": "Laura Elena Mart\u00ednez",
+        "comentario": "Pude enviar mi comentario sin problemas. El dise\u00f1o est\u00e1 limpio y f\u00e1cil de usar.",
+        "fecha": "2026-03-28 23:07:04"
     },
     {
-        "nombre": "Elian",
-        "comentario": "prueba",
-        "fecha": "2026-03-28 23:29:17"
+        "nombre": "Kevin Antonio P\u00e9rez",
+        "comentario": "El sistema carga bien y los comentarios se muestran correctamente en pantalla.",
+        "fecha": "2026-03-28 23:07:15"
     },
     {
-        "nombre": "Elian",
-        "comentario": "prueba",
-        "fecha": "2026-03-28 23:29:18"
+        "nombre": "Samuel de Jes\u00fas Herrera",
+        "comentario": "Prob\u00e9 el formulario y guard\u00f3 el comentario correctamente. Todo funcion\u00f3 bien.",
+        "fecha": "2026-03-28 23:07:26"
     },
     {
-        "nombre": "Elian",
-        "comentario": "prueba",
-        "fecha": "2026-03-28 23:29:19"
-    },
-    {
-        "nombre": "Elian",
-        "comentario": "prueba",
-        "fecha": "2026-03-28 23:29:20"
-    },
-    {
-        "nombre": "Elian",
-        "comentario": "prueba",
-        "fecha": "2026-03-28 23:29:20"
-    },
-    {
-        "nombre": "Elian",
-        "comentario": "prueba",
-        "fecha": "2026-03-28 23:29:20"
-    },
-    {
-        "nombre": "Elian",
-        "comentario": "prueba",
-        "fecha": "2026-03-28 23:29:24"
-    },
-    {
-        "nombre": "Elian",
-        "comentario": "prueba",
-        "fecha": "2026-03-28 23:29:25"
-    },
-    {
-        "nombre": "Elian",
-        "comentario": "prueba",
-        "fecha": "2026-03-28 23:30:02"
-    },
-    {
-        "nombre": "Elian",
-        "comentario": "prueba",
-        "fecha": "2026-03-28 23:30:25"
-    },
-    {
-        "nombre": "Elian",
-        "comentario": "prueba",
-        "fecha": "2026-03-28 23:30:36"
+        "nombre": "Ashley Nicole Ram\u00edrez",
+        "comentario": "Prob\u00e9 el formulario y guard\u00f3 el comentario correctamente. Todo funcion\u00f3 bien.",
+        "fecha": "2026-03-28 23:07:38"
     }
+    
 ]
