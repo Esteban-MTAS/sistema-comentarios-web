@@ -13,8 +13,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
-
-    <link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="CSS/styles.css"/>
   </head>
   <body>
     <nav class="navbar navbar-dark shadow-sm py-2">
